@@ -1,0 +1,14 @@
+--匯率資料table
+drop table exchangerate;
+CREATE table exchangerate (code varchar(5) PRIMARY KEY, rate DOUBLE PRECISION, createtime TIMESTAMP, updatetime TIMESTAMP);
+insert into exchangerate values('ZAR', 2.54, TIMESTAMP '2023-02-20 16.20.00', TIMESTAMP '2023-02-20 16.20.00');
+insert into exchangerate values('NZD', 18.49, TIMESTAMP '2023-02-20 16.20.00', TIMESTAMP '2023-02-20 16.20.00');
+
+--幣別中文對應table
+drop table trmval;
+create table trmval(code varchar(50) primary key, mean varchar(100));
+insert into trmval values('USD', '美元');
+insert into trmval values('GBP', '英鎊');
+insert into trmval values('EUR', '歐元');
+insert into trmval values('ZAR', '南非幣');
+insert into trmval values('NZD', '紐元');
